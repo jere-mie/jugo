@@ -1,4 +1,3 @@
-baseURL = 'https://jere-mie.github.io/jugo'
+baseURL = 'https://jere-mie.github.io/'
 languageCode = 'en-us'
 title = 'Jugo'
-
