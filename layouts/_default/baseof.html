@@ -1,3 +1,8 @@
+{{ $bootstrap:="bootstrap-grid.min.css" }}
+{{ $pico:="pico.min.css" }}
+{{ $empty:="" }}
+{{ $about:="about" }}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,21 +10,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ or .Title .Site.Title }}{{ if ne .Kind "home" }} | {{ .CurrentSection.Title }}{{ end }}</title>
-    <link rel="stylesheet" href="{{ relURL "bootstrap-grid.min.css" }}">
-    <link rel="stylesheet" href=" {{ relURL "pico.min.css" }}">
+    <link rel="stylesheet" href="{{ relURL $bootstrap }}">
+    <link rel="stylesheet" href=" {{ relURL $pico }}">
 </head>
 
 <body>
     <nav class="container-fluid">
         <ul>
             <li>
-                <a href="{{ relURL "" }}" class="contrast" ><strong>Jugo</strong></a>
+                <a href="{{ relURL $empty }}" class="contrast" ><strong>Jugo</strong></a>
             </li>
             <li>
-                <a href="{{ relURL "" }}">Home</a>
+                <a href="{{ relURL $empty }}">Home</a>
             </li>
             <li>
-                <a href="{{ relURL "about" }}">About</a>
+                <a href="{{ relURL $about }}">About</a>
             </li>
         </ul>
     </nav>
